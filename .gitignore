@@ -209,5 +209,6 @@ __marimo__/
 flowcharts
 logs
 mongoDB.ipynb
-# aps_failure_training_set1.csv
+aps_failure_training_set1.csv
+artifact
 

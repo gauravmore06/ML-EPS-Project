@@ -6,6 +6,8 @@ from sensor.logger import logging
 #from sensor.entity.config_entity  import TrainingPipelineConfig,DataIngestionConfig
 
 from sensor.pipeline.training_pipeline import TrainPipeline
+import warnings
+warnings.filterwarnings("ignore", category=FutureWarning)
 
 # def test_exception():
 #     try:

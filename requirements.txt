@@ -1,4 +1,15 @@
 pymongo==4.2.0
+pandas
+numpy
+scikit-learn
+xgboost
+catboost
+seaborn
+python-dotenv
+PyYAML
+dill
+imblearn
+scipy
 
 
 -e .

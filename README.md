@@ -1,38 +1,43 @@
-📖 About the Project
+## 📖 About the Project  
 
-Industrial equipment often produces sensor data that indicates the health status of machines. Predicting potential failures early can:
+Industrial equipment often produces sensor data that indicates the health status of machines. Predicting potential failures early can:  
 
-⚡ Reduce downtime
+⚡ Reduce downtime  
+⚙️ Improve maintenance efficiency  
+💰 Save operational costs  
 
-⚙️ Improve maintenance efficiency
+🔍 This project demonstrates how to:  
 
-💰 Save operational costs
+1️⃣ Ingest raw sensor data from CSV or database  
+2️⃣ Preprocess and clean data → handle missing values, scaling, transformations  
+3️⃣ Train ML models → (classification: faulty vs. healthy machine state)  
+4️⃣ Save & load the latest best model automatically  
+5️⃣ Expose REST APIs for:  
 
-🔍 This project demonstrates how to:
+- 🏋️ **Training** → `/train`  
+- 🔮 **Prediction** → `/predict`  
 
-1️⃣ Ingest raw sensor data from CSV or database
-2️⃣ Preprocess and clean data → handle missing values, scaling, transformations
-3️⃣ Train ML models → (classification: faulty vs. healthy machine state)
-4️⃣ Save & load the latest best model automatically
-5️⃣ Expose REST APIs for:
+✨ The project is designed with scalability in mind → you can plug in new datasets, retrain models, and serve predictions without changing the core codebase.  
 
-🏋️ Training → /train
+---
 
-🔮 Prediction → /predict
+## 📂 Project Structure  
 
-✨ The project is designed with scalability in mind → you can plug in new datasets, retrain models, and serve predictions without changing the core codebase.
-
+```bash
 ML-EPS-Project/
-├── artifact/               # 📁 Training artifacts (logs, outputs, checkpoints)
-├── config/                 # ⚙️ Configuration files
-├── saved_models/           # 🧠 Serialized trained models
-├── sensor/                 # 🏗 Core package (pipeline, configs, utils)
-│   ├── pipeline/           # 🔄 Training pipeline
-│   ├── configuration/      # 🗄 MongoDB & config helpers
-│   ├── ml/                 # 🤖 Model utilities (resolver, mappings, estimator)
-│   └── utils/              # 🛠 Helper functions
-├── main.py                 # 🚀 Main FastAPI application
-├── fast.py                 # ⚡ Alternate FastAPI app (optional)
-├── input_file.csv          # 📊 Sample input file for predictions
-├── requirements.txt        # 📦 Python dependencies
-└── setup.py                # 🛠 Package setup script
+│
+├── artifact/            # 📁 Training artifacts (logs, outputs, checkpoints)
+├── config/              # ⚙️ Configuration files
+├── saved_models/        # 🧠 Serialized trained models
+│
+├── sensor/              # 🏗 Core package (pipeline, configs, utils)
+│   ├── pipeline/        # 🔄 Training pipeline
+│   ├── configuration/   # 🗄 MongoDB & config helpers
+│   ├── ml/              # 🤖 Model utilities (resolver, mappings, estimator)
+│   └── utils/           # 🛠 Helper functions
+│
+├── main.py              # 🚀 Main FastAPI application
+├── fast.py              # ⚡ Alternate FastAPI app (optional)
+├── input_file.csv       # 📊 Sample input file for predictions
+├── requirements.txt     # 📦 Python dependencies
+└── setup.py             # 🛠 Package setup script
